@@ -1,0 +1,62 @@
+---- HANDLE_CTX Matches (61 in 8 files) ----
+Core.c (libusb):	ctx = HANDLE_CTX(dev_handle);
+Core.c (libusb):			usbi_err(HANDLE_CTX(dev), "zero bytes returned in ctrl transfer?");
+Darwin_usb.c (libusb\os):  usbi_warn (HANDLE_CTX(dev_handle), "no pipeRef found with endpoint address 0x%02x.", ep);
+Darwin_usb.c (libusb\os):      usbi_warn (HANDLE_CTX (dev_handle), "USBDeviceOpen: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):      usbi_err (HANDLE_CTX (dev_handle), "CreateDeviceAsyncEventSource: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):  usbi_add_pollfd(HANDLE_CTX(dev_handle), priv->fds[0], POLLIN);
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "Close called on a device that was not open!\n");
+Darwin_usb.c (libusb\os):        usbi_warn (HANDLE_CTX (dev_handle), "USBDeviceClose: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):  usbi_remove_pollfd (HANDLE_CTX (dev_handle), priv->fds[0]);
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "can't get number of endpoints for interface: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):      usbi_err (HANDLE_CTX (dev_handle), "error getting pipe information for pipe %d: %s", i, darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):    usbi_info (HANDLE_CTX (dev_handle), "no interface found; setting configuration: %d", dpriv->first_config);
+Darwin_usb.c (libusb\os):      usbi_err (HANDLE_CTX (dev_handle), "could not set configuration");
+Darwin_usb.c (libusb\os):      usbi_err (HANDLE_CTX (dev_handle), "darwin_get_interface: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "interface not found");
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "IOCreatePlugInInterfaceForService: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "plugin interface not found");
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "QueryInterface: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "USBInterfaceOpen: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "could not build endpoint table");
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "could not create async event source");
+Darwin_usb.c (libusb\os):    usbi_warn (HANDLE_CTX (dev_handle), "USBInterfaceClose: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):    usbi_warn (HANDLE_CTX (dev_handle), "Release: %s", darwin_error_str(kresult));
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "could not build endpoint table");
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "endpoint not found on any open interface");
+Darwin_usb.c (libusb\os):    usbi_warn (HANDLE_CTX (dev_handle), "ClearPipeStall: %s", darwin_error_str (kresult));
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "ResetDevice: %s", darwin_error_str (kresult));
+Darwin_usb.c (libusb\os):    usbi_err (HANDLE_CTX (dev_handle), "darwin_get_interface: %s", darwin_error_str(kresult));
+Io.c (libusb):		usbi_mutex_lock(&HANDLE_CTX(handle)->flying_transfers_lock);
+Io.c (libusb):		list_for_each_entry(cur, &HANDLE_CTX(handle)->flying_transfers, list, struct usbi_transfer)
+Io.c (libusb):		usbi_mutex_unlock(&HANDLE_CTX(handle)->flying_transfers_lock);
+Libusbi.h (libusb):#define HANDLE_CTX(handle) (DEVICE_CTX((handle)->dev))
+Libusbi.h (libusb):#define TRANSFER_CTX(transfer) (HANDLE_CTX((transfer)->dev_handle))
+Linux_usbfs.c (libusb\os):			usbi_err(HANDLE_CTX(handle), "getcap failed (%d)", errno);
+Linux_usbfs.c (libusb\os):	return usbi_add_pollfd(HANDLE_CTX(handle), hpriv->fd, POLLOUT);
+Linux_usbfs.c (libusb\os):	usbi_remove_pollfd(HANDLE_CTX(dev_handle), fd);
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle), "device unconfigured");
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle), "failed, error %d errno %d", r, errno);
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):				usbi_warn(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle),
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle), "reap failed error %d errno=%d",
+Linux_usbfs.c (libusb\os):		usbi_err(HANDLE_CTX(handle), "unrecognised endpoint type %x",
+Linux_usbfs.c (libusb\os):			usbi_remove_pollfd(HANDLE_CTX(handle), hpriv->fd);
+Netbsd_usb.c (libusb\os):	return usbi_add_pollfd(HANDLE_CTX(handle), hpriv->pipe[0], POLLIN);
+Netbsd_usb.c (libusb\os):	usbi_remove_pollfd(HANDLE_CTX(handle), hpriv->pipe[0]);
+Netbsd_usb.c (libusb\os):			usbi_remove_pollfd(HANDLE_CTX(handle), hpriv->pipe[0]);
+Openbsd_usb.c (libusb\os):	return usbi_add_pollfd(HANDLE_CTX(handle), hpriv->pipe[0], POLLIN);
+Openbsd_usb.c (libusb\os):	usbi_remove_pollfd(HANDLE_CTX(handle), hpriv->pipe[0]);
+Openbsd_usb.c (libusb\os):			usbi_remove_pollfd(HANDLE_CTX(handle), hpriv->pipe[0]);
+Sync.c (libusb):	struct libusb_context *ctx = HANDLE_CTX(transfer->dev_handle);
+Sync.c (libusb):		usbi_warn(HANDLE_CTX(dev_handle),
+Sync.c (libusb):		usbi_warn(HANDLE_CTX(dev_handle),
